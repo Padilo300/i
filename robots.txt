@@ -1,0 +1,8 @@
+#EN: Dear friend, here is the text for robots. For the people we write on our blog → https://netpeak.net/blog/ 
+#RU: Уважаемый посетитель, здесь находится текст для роботов. Для людей мы пишем на нашем блоге → https://netpeak.net/ru/blog/ 
+#BG: Уважаеми посетител, тук се намира текст за роботи. За хора ние пишем в нашия блог → https://netpeak.net/bg/blog/  
+
+User-Agent: *
+Allow: /
+Host: http://iqiosk.com.ua/
+Sitemap: http://iqiosk.com.ua/sitemap.xml/
