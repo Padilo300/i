@@ -563,6 +563,59 @@ $( "#dialog-link, #icons li" ).hover(
 		$( this ).removeClass( "ui-state-hover" );
 	}
 );
-</script>
+</script>	<script>
+		$('document').ready(function(){
+			function buy(b){
+				var inputName 	=	$('#inputName').val(),
+					inputPhone 	=	$('#inputPhone').val(),
+					myModal		=   $('#myModal'),
+					formBuy		=   $('#formBuy');
+				$.ajax({
+					type: "POST",
+					url: "/php/sendForm.php",
+					data: {'inputName':inputName, 'inputPhone':inputPhone,'product':b},
+					success: function () {
+						$('#modalFuncYou').modal('show');
+						$(myModal).trigger('reset');
+						$(myModal).modal('hide');
+					},
+					error: function (data) {
+						console.log(data);
+					}
+				});
+				return false;
+			}
+
+			
+			$('.block2').on('click','button',function(){	
+				var a = $(this).parents(".block2")		;
+				var b =$(a).find('.block2-txt a').text();
+
+				$('#myModal').modal('show');
+				$('#buyNow').on('click', function(e){
+					e.preventDefault();
+					console.log(b);
+					buy(b);
+					return false;
+				});
+			});
+
+			$('#btnBuy').on('click',function(){
+				var name  = $('.product-detail-name').text();
+				$('#myModal').modal('show');
+				$('#buyNow').on('click', function(e){
+					e.preventDefault();
+					buy(name);
+					return false;
+				});
+			});
+		});
+
+		$('#btnBuy').on('click',function(){
+			var name  = $('.product-detail-name').text();
+			console.log(name);
+		});
+	</script>
+
 </body>
 </html>

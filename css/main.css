@@ -4148,3 +4148,7 @@ body > div.banner.bgwhite.p-t-40.p-b-40 > div > div > div{
 *{
   max-width: 100%;
 }
+
+header .header-wrapicon2{
+  display: none;
+}

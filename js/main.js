@@ -211,11 +211,8 @@ if(ATTR == ""){
 }else{console.log('Фрейм не пустой');}
 
 function addBtnBuy(){
-    var btn = '<button type="button" id="btnBuy" data-toggle="modal" data-target="#myModal" class="btn btn-success">Купить</button>';
-   
-
+    var btn = '<button type="button" id="btnBuy"  class="btn btn-success">Купить</button>';
     $('.product-detail-name ').append(btn);
-
 }
 
 addBtnBuy();
