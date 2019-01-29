@@ -3,7 +3,7 @@
 
         
 
-        $to         = 'padilo300@gmail.com' ;
+        $to         = 'iqiosk68@gmail.com' ;
         $subject    = 'Заказ на сайте'   ;
         $phone      = trim(urldecode(htmlspecialchars($_POST['inputPhone']))) ;
         $product    = trim(urldecode(htmlspecialchars($_POST['product'])))    ;
@@ -21,7 +21,7 @@
                 </body>
             </html>';
         $headers  = "Content-type: text/html; charset=utf-8 \r\n";
-        $headers .= "From: mail@accelerometr.zzz.com.ua\r\n";
+        $headers .= "From: iqiosk.com.ua@gmail.com\r\n";
 
         if (mail($to, $subject, $message, $headers)){ 
             return true;

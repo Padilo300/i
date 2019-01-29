@@ -4152,3 +4152,7 @@ body > div.banner.bgwhite.p-t-40.p-b-40 > div > div > div{
 header .header-wrapicon2{
   display: none;
 }
+
+.header-icons{
+  display: none;
+}
